@@ -1,32 +1,23 @@
-public class Admin {
-    private int id;
-    private String name;
+
+
+
+public abstract class Admin {
+    
 private double salary;
-    public Admin(int id, String name,double salary) {
-        this.id = id;
-        this.name = name;
-        this.salary=salary;
-    }
 
+  public void basicsalary(double salary){
+  salary=100000;
+      this.salary=salary;
+  };
+
+   
     public double getSalary() {
+        
         return salary;
+        
     }
 
-    public int getId() {
-        return id;
+abstract int employee_id(int id);
+    
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-    void check_data(Bike b1){    
-    }
-}

@@ -9,11 +9,28 @@
  * @author shoaib
  */
 
-class Senior_admin extends Main_admin{
-Senior_admin(int id,String name,double salary){
-super(id,name,salary);
+class Senior_admin extends Admin implements iBonus{
+double bonus;
+int id;
+    @Override
+    int employee_id(int id) {
+    id=101;
+    this.id=id;
+    return id;
+    }
+
+    
+
+    @Override
+    public double getSalary() {
+        return super.getSalary(); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    @Override
+    public double calculateBonus(double salary) {
+    bonus=salary*.20;
+        return bonus;
+        
+    }
+
 }
-@Override
-public double cal_salary(){
-return getSalary()*12;
-}}

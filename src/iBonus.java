@@ -8,6 +8,6 @@
  *
  * @author shoaib
  */
-interface iTask{
-void edit();
+interface iBonus{
+double calculateBonus(double salary);
 }

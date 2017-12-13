@@ -1,28 +1,23 @@
 
 import java.awt.Color;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.JOptionPane;
+
 
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author shoaib
  */
-public class AdminPanel extends javax.swing.JFrame {
+public class SeniorAdminPanel extends javax.swing.JFrame {
+    Moderator m=new Moderator();
 
     /**
      * Creates new form AdminPanel
      */
-    public AdminPanel() {
+    public SeniorAdminPanel() {
         initComponents();
     }
 
@@ -42,6 +37,10 @@ public class AdminPanel extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        jButton6 = new javax.swing.JButton();
+        setsalary = new javax.swing.JTextField();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(250, 10));
@@ -78,7 +77,7 @@ public class AdminPanel extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(10, 60, 180, 60);
+        jButton2.setBounds(10, 60, 180, 40);
 
         jButton3.setBackground(new java.awt.Color(153, 153, 255));
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -90,35 +89,65 @@ public class AdminPanel extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(10, 130, 180, 60);
+        jButton3.setBounds(10, 110, 180, 40);
 
         jButton4.setBackground(new java.awt.Color(0, 204, 51));
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton4.setForeground(new java.awt.Color(0, 51, 204));
-        jButton4.setText("Watch Senior Salary");
+        jButton4.setText("Watch Senior Bonus");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(10, 200, 180, 70);
+        jButton4.setBounds(10, 290, 180, 40);
 
         jButton5.setBackground(new java.awt.Color(51, 255, 51));
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton5.setForeground(new java.awt.Color(51, 0, 204));
-        jButton5.setText("Watch Jonior Salary");
+        jButton5.setText("Watch Jonior Bonus");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(10, 280, 180, 60);
+        jButton5.setBounds(10, 410, 180, 40);
 
         jLabel2.setOpaque(true);
         getContentPane().add(jLabel2);
         jLabel2.setBounds(220, 50, 390, 310);
+
+        jButton6.setText("Set Basic Salary");
+        getContentPane().add(jButton6);
+        jButton6.setBounds(10, 160, 109, 40);
+        getContentPane().add(setsalary);
+        setsalary.setBounds(130, 160, 60, 40);
+
+        jButton7.setBackground(new java.awt.Color(0, 204, 51));
+        jButton7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton7.setForeground(new java.awt.Color(0, 51, 204));
+        jButton7.setText("Watch Senior Salary");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton7);
+        jButton7.setBounds(10, 230, 180, 40);
+
+        jButton8.setBackground(new java.awt.Color(51, 255, 51));
+        jButton8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton8.setForeground(new java.awt.Color(51, 0, 204));
+        jButton8.setText("Watch Jonior Salary");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton8);
+        jButton8.setBounds(10, 350, 180, 40);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -131,65 +160,57 @@ dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-      
-        try {
-            File f=new File("Bike_information.txt");
-            Scanner sc=new Scanner(f);
-            
-            while(sc.hasNext()){
-                String detail=sc.nextLine();
-                
+      String detail;
+
+m.check_data();
+detail=m.detail;                       
                 jLabel2.setText(detail);
                 jLabel2.setForeground(Color.RED);
                 jLabel2.setBackground(Color.black);
                 jButton2.setBackground(Color.CYAN);
-                
-            }            // TODO add your handling code here:
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(AdminPanel.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        try {
-            File f2=new File("Complain.txt");
-            Scanner sc1=new Scanner(f2);
-            
-            while(sc1.hasNext()){
-                String detail=sc1.nextLine();
-                
-                jLabel2.setText(detail);
+        
+        String complains;
+        m.allcomplain();
+        complains=m.complains;
+                        
+                jLabel2.setText(complains);
                 jLabel2.setForeground(Color.BLACK);
                 jLabel2.setBackground(Color.MAGENTA);
                 jButton3.setBackground(Color.CYAN);
                 
-            }            // TODO add your handling code here:
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(AdminPanel.class.getName()).log(Level.SEVERE, null, ex);
-        } 
      
     // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
 
-Senior_admin sr=new Senior_admin(101,"Shoaib",10000);
-sr.cal_salary();
-sr.cal_bonus(10);
+Senior_admin sr=new Senior_admin();
+
                 jButton4.setBackground(Color.CYAN);
 
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-Junior_admin jr=new Junior_admin(102,"Shuvo",20000);
-jr.cal_salary();
-jr.cal_bonus(1000);
+Junior_admin jr=new Junior_admin();
+
 
                 jButton5.setBackground(Color.CYAN);
 
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton8ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -208,20 +229,23 @@ jr.cal_bonus(1000);
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AdminPanel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SeniorAdminPanel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AdminPanel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SeniorAdminPanel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AdminPanel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SeniorAdminPanel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AdminPanel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SeniorAdminPanel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AdminPanel().setVisible(true);
+                new SeniorAdminPanel().setVisible(true);
             }
         });
     }
@@ -232,7 +256,11 @@ jr.cal_bonus(1000);
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JTextField setsalary;
     // End of variables declaration//GEN-END:variables
 }

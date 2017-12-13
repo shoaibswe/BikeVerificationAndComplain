@@ -116,11 +116,14 @@ File f=new File("information.txt");
 
 try(FileWriter fw=new FileWriter(f,true)){
 fw.write(String.valueOf(""+s+""));
-
+fw.write("\r\n");
+fw.close();
 } 
 
 try(FileWriter fx=new FileWriter(x,true)){
    fx.write(String.valueOf(""+i+""));   
+   fx.write("\r\n");
+   fx.close();
 }
 }
 catch(Exception e){

@@ -29,6 +29,7 @@ public class AdminLoginGui extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
@@ -36,6 +37,10 @@ public class AdminLoginGui extends javax.swing.JFrame {
         jTextField2 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        moderator = new javax.swing.JCheckBox();
+        senior = new javax.swing.JCheckBox();
+        jonior = new javax.swing.JCheckBox();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBounds(new java.awt.Rectangle(250, 10, 0, 0));
@@ -77,7 +82,7 @@ public class AdminLoginGui extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(330, 290, 73, 30);
+        jButton1.setBounds(360, 410, 73, 30);
 
         jButton2.setBackground(new java.awt.Color(0, 255, 0));
         jButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -89,7 +94,32 @@ public class AdminLoginGui extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(210, 290, 61, 31);
+        jButton2.setBounds(190, 410, 61, 31);
+
+        moderator.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        moderator.setText("Moderator");
+        getContentPane().add(moderator);
+        moderator.setBounds(370, 350, 110, 25);
+
+        senior.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        senior.setForeground(new java.awt.Color(255, 51, 51));
+        senior.setText("Senior");
+        getContentPane().add(senior);
+        senior.setBounds(370, 290, 110, 25);
+
+        jonior.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jonior.setForeground(new java.awt.Color(0, 0, 204));
+        jonior.setText("Jonior");
+        getContentPane().add(jonior);
+        jonior.setBounds(370, 320, 100, 25);
+
+        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(204, 0, 0));
+        jLabel4.setText("Select Your Identity");
+        jLabel4.setOpaque(true);
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(100, 260, 180, 50);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -103,7 +133,7 @@ System.exit(0);        // TODO add your handling code here:
         String adminid= jTextField1.getText();
         String adminpass= jTextField2.getText();
         if(adminid.equals("admin")&& adminpass.equals("admin")){
-            AdminPanel ap=new AdminPanel();
+            SeniorAdminPanel ap=new SeniorAdminPanel();
             ap.setVisible(true);
             dispose();
             
@@ -151,12 +181,17 @@ JOptionPane.showMessageDialog(null, "Invalid ID or Password!");
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JCheckBox jonior;
+    private javax.swing.JCheckBox moderator;
+    private javax.swing.JCheckBox senior;
     // End of variables declaration//GEN-END:variables
 }

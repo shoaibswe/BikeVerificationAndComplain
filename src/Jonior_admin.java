@@ -9,20 +9,34 @@ import javax.swing.JOptionPane;
  *
  * @author shoaib
  */
-class Junior_admin extends Main_admin{
-    Junior_admin(int id,String name,double salary){
-super(id,name,salary);
-}
+class Junior_admin extends Admin implements iBonus{
+     double bonus;
+     int id;
+
     @Override
-    public double cal_salary(){
-return getSalary()*12;
-}
-    @Override
-    void cal_bonus(int a){
-    JOptionPane.showMessageDialog(null,a);
+    int employee_id(int id) {
+       id=102;
+       this.id=id;
+        
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         return id;
     }
+    
+
     @Override
-    void cal_bonus(double b){
-    JOptionPane.showMessageDialog(null,b);
+    public double getSalary() {
+        return super.getSalary(); //To change body of generated methods, choose Tools | Templates.
     }
+
+    
+
+    @Override
+    public double calculateBonus(double salary) {
+       
+        bonus=salary*.10;
+        return bonus;
+        
+//throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
