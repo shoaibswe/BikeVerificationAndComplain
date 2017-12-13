@@ -6,7 +6,7 @@
 
 /**
  *
- * @author NCT
+ * @author shoaib
  */
 public class regsuccess extends javax.swing.JFrame {
 

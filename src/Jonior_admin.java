@@ -1,4 +1,3 @@
-
 import javax.swing.JOptionPane;
 
 /*
@@ -6,10 +5,9 @@ import javax.swing.JOptionPane;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
- * @author NCT
+ * @author shoaib
  */
 class Junior_admin extends Main_admin{
     Junior_admin(int id,String name,double salary){

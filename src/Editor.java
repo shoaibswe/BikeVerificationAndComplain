@@ -6,7 +6,7 @@
 
 /**
  *
- * @author NCT
+ * @author shoaib
  */
 class Edior extends Admin implements iTask{
 

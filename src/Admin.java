@@ -30,4 +30,3 @@ private double salary;
     void check_data(Bike b1){    
     }
 }
-

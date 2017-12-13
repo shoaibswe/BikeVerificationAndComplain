@@ -10,7 +10,7 @@ import javax.swing.JFrame;
 
 /**
  *
- * @author NCT
+ * @author shoaib
  */
 public class mainpage extends javax.swing.JFrame {
 

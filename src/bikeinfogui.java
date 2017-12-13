@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author NCT
+ * @author shoaib
  */
 public class bikeinfogui extends javax.swing.JFrame {
 

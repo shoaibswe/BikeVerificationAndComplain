@@ -6,7 +6,7 @@
 
 /**
  *
- * @author NCT
+ * @author shoaib
  */
 
 class Senior_admin extends Main_admin{

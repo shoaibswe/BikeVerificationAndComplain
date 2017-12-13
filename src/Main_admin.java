@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author NCT
+ * @author shoaib
  */
 abstract class Main_admin{
 

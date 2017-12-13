@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author NCT
+ * @author shoaib
  */
 public class Verifygui extends javax.swing.JFrame {
 

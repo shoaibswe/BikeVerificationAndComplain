@@ -6,7 +6,7 @@
 
 /**
  *
- * @author NCT
+ * @author shoaib
  */
 class Moderator extends Admin{
 

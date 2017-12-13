@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author NCT
+ * @author shoaib
  */
 public class logingui extends javax.swing.JFrame {
 

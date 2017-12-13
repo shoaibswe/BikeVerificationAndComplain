@@ -6,7 +6,7 @@
 
 /**
  *
- * @author NCT
+ * @author shoaib
  */
 public class LoggedIngui extends javax.swing.JFrame {
 
