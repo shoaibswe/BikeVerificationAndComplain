@@ -29,7 +29,7 @@ public class AdminLoginGui extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
@@ -37,7 +37,7 @@ public class AdminLoginGui extends javax.swing.JFrame {
         jTextField2 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        moderator = new javax.swing.JCheckBox();
+        mod = new javax.swing.JCheckBox();
         senior = new javax.swing.JCheckBox();
         jonior = new javax.swing.JCheckBox();
         jLabel4 = new javax.swing.JLabel();
@@ -96,20 +96,28 @@ public class AdminLoginGui extends javax.swing.JFrame {
         getContentPane().add(jButton2);
         jButton2.setBounds(190, 410, 61, 31);
 
-        moderator.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        moderator.setText("Moderator");
-        getContentPane().add(moderator);
-        moderator.setBounds(370, 350, 110, 25);
+        buttonGroup2.add(mod);
+        mod.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        mod.setText("Moderator");
+        getContentPane().add(mod);
+        mod.setBounds(370, 350, 110, 25);
 
+        buttonGroup2.add(senior);
         senior.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         senior.setForeground(new java.awt.Color(255, 51, 51));
         senior.setText("Senior");
         getContentPane().add(senior);
         senior.setBounds(370, 290, 110, 25);
 
+        buttonGroup2.add(jonior);
         jonior.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jonior.setForeground(new java.awt.Color(0, 0, 204));
         jonior.setText("Jonior");
+        jonior.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                joniorActionPerformed(evt);
+            }
+        });
         getContentPane().add(jonior);
         jonior.setBounds(370, 320, 100, 25);
 
@@ -132,18 +140,35 @@ System.exit(0);        // TODO add your handling code here:
 
         String adminid= jTextField1.getText();
         String adminpass= jTextField2.getText();
-        if(adminid.equals("admin")&& adminpass.equals("admin")){
+        if(adminid.equals("admin")&& adminpass.equals("101") && senior.isSelected()==true){
             SeniorAdminPanel ap=new SeniorAdminPanel();
             ap.setVisible(true);
             dispose();
-            
-}
+            }
+        else if(adminid.equals("admin")&& adminpass.equals("102") && jonior.isSelected()==true){
+        JoniorAdminPanel jp=new  JoniorAdminPanel();
+        jp.setVisible(true);
+            dispose();
+        }
+        
+         else if(adminid.equals("admin")&& adminpass.equals("103") && mod.isSelected()==true){
+                ModeratorPanel mp=new  ModeratorPanel();
+        mp.setVisible(true);
+            dispose();
+             
+        }       
+        
 else{
 JOptionPane.showMessageDialog(null, "Invalid ID or Password!");
 }
         
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void joniorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_joniorActionPerformed
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_joniorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -181,7 +206,7 @@ JOptionPane.showMessageDialog(null, "Invalid ID or Password!");
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
@@ -191,7 +216,7 @@ JOptionPane.showMessageDialog(null, "Invalid ID or Password!");
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JCheckBox jonior;
-    private javax.swing.JCheckBox moderator;
+    private javax.swing.JCheckBox mod;
     private javax.swing.JCheckBox senior;
     // End of variables declaration//GEN-END:variables
 }

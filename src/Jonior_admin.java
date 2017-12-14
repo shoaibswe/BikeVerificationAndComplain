@@ -1,4 +1,3 @@
-import javax.swing.JOptionPane;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -10,33 +9,26 @@ import javax.swing.JOptionPane;
  * @author shoaib
  */
 class Junior_admin extends Admin implements iBonus{
-     double bonus;
-     int id;
-
+double bonus;
+int id;
     @Override
     int employee_id(int id) {
-       id=102;
-       this.id=id;
-        
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-         return id;
+    id=101;
+    this.id=id;
+    return id;
     }
+
     
 
     @Override
     public double getSalary() {
         return super.getSalary(); //To change body of generated methods, choose Tools | Templates.
     }
-
     
-
     @Override
     public double calculateBonus(double salary) {
-       
-        bonus=salary*.10;
+    bonus=salary*.10;
         return bonus;
         
-//throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    }  }
 
-}

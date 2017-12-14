@@ -44,7 +44,6 @@ public class registergui extends javax.swing.JFrame {
         setBackground(new java.awt.Color(51, 51, 51));
         setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         setMinimumSize(new java.awt.Dimension(650, 450));
-        setPreferredSize(new java.awt.Dimension(650, 450));
         getContentPane().setLayout(null);
         getContentPane().add(jTextField1);
         jTextField1.setBounds(350, 90, 140, 29);

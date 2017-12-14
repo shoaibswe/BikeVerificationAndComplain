@@ -12,8 +12,9 @@ import java.awt.Color;
  * @author shoaib
  */
 public class SeniorAdminPanel extends javax.swing.JFrame {
-    Moderator m=new Moderator();
 
+    Moderator m = new Moderator();
+    Senior_admin sr = new Senior_admin();
     /**
      * Creates new form AdminPanel
      */
@@ -30,17 +31,22 @@ public class SeniorAdminPanel extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton11 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        out = new javax.swing.JLabel();
         jButton6 = new javax.swing.JButton();
         setsalary = new javax.swing.JTextField();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+
+        jButton11.setText("jButton11");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(250, 10));
@@ -65,7 +71,7 @@ public class SeniorAdminPanel extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(250, 440, 150, 23);
+        jButton1.setBounds(250, 480, 150, 23);
 
         jButton2.setBackground(new java.awt.Color(153, 153, 255));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -103,27 +109,20 @@ public class SeniorAdminPanel extends javax.swing.JFrame {
         getContentPane().add(jButton4);
         jButton4.setBounds(10, 290, 180, 40);
 
-        jButton5.setBackground(new java.awt.Color(51, 255, 51));
-        jButton5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(51, 0, 204));
-        jButton5.setText("Watch Jonior Bonus");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        out.setOpaque(true);
+        getContentPane().add(out);
+        out.setBounds(220, 50, 390, 410);
+
+        jButton6.setText("Give Bonus");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                jButton6ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton5);
-        jButton5.setBounds(10, 410, 180, 40);
-
-        jLabel2.setOpaque(true);
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(220, 50, 390, 310);
-
-        jButton6.setText("Set Basic Salary");
         getContentPane().add(jButton6);
-        jButton6.setBounds(10, 160, 109, 40);
+        jButton6.setBounds(80, 170, 109, 40);
         getContentPane().add(setsalary);
-        setsalary.setBounds(130, 160, 60, 40);
+        setsalary.setBounds(10, 170, 60, 40);
 
         jButton7.setBackground(new java.awt.Color(0, 204, 51));
         jButton7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -140,77 +139,142 @@ public class SeniorAdminPanel extends javax.swing.JFrame {
         jButton8.setBackground(new java.awt.Color(51, 255, 51));
         jButton8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton8.setForeground(new java.awt.Color(51, 0, 204));
-        jButton8.setText("Watch Jonior Salary");
+        jButton8.setText("Watch Jonior Bonus");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton8);
-        jButton8.setBounds(10, 350, 180, 40);
+        jButton8.setBounds(10, 400, 180, 40);
+
+        jButton9.setBackground(new java.awt.Color(51, 0, 51));
+        jButton9.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jButton9.setText("Moderator Salary");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton9);
+        jButton9.setBounds(10, 460, 180, 40);
+
+        jButton10.setBackground(new java.awt.Color(51, 255, 51));
+        jButton10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton10.setForeground(new java.awt.Color(51, 0, 204));
+        jButton10.setText("Watch Jonior Salary");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton10);
+        jButton10.setBounds(10, 350, 180, 40);
+
+        jButton5.setText("Exit");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton5);
+        jButton5.setBounds(460, 480, 51, 23);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-mainpage mp = new mainpage();
-mp.setVisible(true);
-dispose();
+        mainpage mp = new mainpage();
+        mp.setVisible(true);
+        dispose();
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-      String detail;
+        String detail;
+        m.check_data();
+        detail = m.detail;
+        out.setText(detail);
+        out.setForeground(Color.RED);
+        out.setBackground(Color.black);
+        jButton2.setBackground(Color.CYAN);
 
-m.check_data();
-detail=m.detail;                       
-                jLabel2.setText(detail);
-                jLabel2.setForeground(Color.RED);
-                jLabel2.setBackground(Color.black);
-                jButton2.setBackground(Color.CYAN);
-        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        
+
         String complains;
         m.allcomplain();
-        complains=m.complains;
-                        
-                jLabel2.setText(complains);
-                jLabel2.setForeground(Color.BLACK);
-                jLabel2.setBackground(Color.MAGENTA);
-                jButton3.setBackground(Color.CYAN);
-                
-     
-    // TODO add your handling code here:
+        complains = m.complains;
+
+        out.setText(complains);
+        out.setForeground(Color.BLACK);
+        out.setBackground(Color.MAGENTA);
+        jButton3.setBackground(Color.CYAN);
+
+        // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
 
-Senior_admin sr=new Senior_admin();
-
-                jButton4.setBackground(Color.CYAN);
+        String bonus = String.valueOf(sr.calculateBonus(sr.getSalary()));
+        out.setText(bonus);
+        jButton4.setBackground(Color.CYAN);
 
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-Junior_admin jr=new Junior_admin();
-
-
-                jButton5.setBackground(Color.CYAN);
-
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
-
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        sr.getSalary();
+        String c = String.valueOf(sr.getSalary());
+        out.setText(c);
+       jButton7.setBackground(Color.CYAN);
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+ 
+        out.setText("10000");
+          jButton8.setBackground(Color.CYAN);
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void salarybtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salarybtnActionPerformed
+
+        
+        int b=Integer.parseInt(setsalary.getText());
+        sr.basicsalary(b);
+        
+        // TODO add your handling code here:
+    }//GEN-LAST:event_salarybtnActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+       String c= String.valueOf( m.getSalary()) ;
+        out.setText(c);
+        jButton9.setBackground(Color.CYAN);
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        m.getSalary();
+        String c = String.valueOf(m.getSalary());
+        out.setText(c);
+        jButton10.setBackground(Color.CYAN);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+   setsalary.getText();
+   double b=Integer.parseInt(setsalary.getText());
+        sr.calculateBonus(b);
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+System.exit(0);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -243,15 +307,15 @@ Junior_admin jr=new Junior_admin();
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new SeniorAdminPanel().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new SeniorAdminPanel().setVisible(true);
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -259,8 +323,9 @@ Junior_admin jr=new Junior_admin();
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel out;
     private javax.swing.JTextField setsalary;
     // End of variables declaration//GEN-END:variables
 }

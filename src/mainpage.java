@@ -1,7 +1,3 @@
-
-import java.awt.Color;
-import javax.swing.JFrame;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -18,6 +14,7 @@ public class mainpage extends javax.swing.JFrame {
      * Creates new form mainpage
      */
     public mainpage() {
+        super("Bike Verification and Complain");
         initComponents();
     }
 
@@ -35,9 +32,11 @@ public class mainpage extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jButton5 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         setPreferredSize(new java.awt.Dimension(650, 450));
         getContentPane().setLayout(null);
 
@@ -96,6 +95,18 @@ public class mainpage extends javax.swing.JFrame {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(40, 31, 592, 53);
 
+        jButton5.setBackground(new java.awt.Color(204, 0, 0));
+        jButton5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(255, 255, 255));
+        jButton5.setText("Exit");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton5);
+        jButton5.setBounds(290, 410, 53, 23);
+
         jLabel3.setBackground(new java.awt.Color(0, 153, 153));
         jLabel3.setOpaque(true);
         getContentPane().add(jLabel3);
@@ -132,6 +143,10 @@ Verifygui vg=new Verifygui();
 vg.setVisible(true);
 dispose();// TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+System.exit(0);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -173,6 +188,7 @@ dispose();// TODO add your handling code here:
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
