@@ -12,6 +12,7 @@
 class Senior_admin extends Admin implements iBonus{
 double bonus;
 int id;
+double extra;
     @Override
     int employee_id(int id) {
     id=101;
@@ -31,6 +32,12 @@ int id;
     bonus=salary*.20;
         return bonus;
         
+    }
+
+  public double calculateBonus(double salary,double bonus) {
+    extra = (bonus+salary)*.03;
+        return extra;
+           
     }
 
 }

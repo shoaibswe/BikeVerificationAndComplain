@@ -1,5 +1,6 @@
 
 import java.awt.Color;
+import javax.swing.JOptionPane;
 
 
 /*
@@ -15,6 +16,7 @@ public class SeniorAdminPanel extends javax.swing.JFrame {
 
     Moderator m = new Moderator();
     Senior_admin sr = new Senior_admin();
+
     /**
      * Creates new form AdminPanel
      */
@@ -36,7 +38,7 @@ public class SeniorAdminPanel extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        extra = new javax.swing.JButton();
         out = new javax.swing.JLabel();
         jButton6 = new javax.swing.JButton();
         setsalary = new javax.swing.JTextField();
@@ -45,6 +47,7 @@ public class SeniorAdminPanel extends javax.swing.JFrame {
         jButton9 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
+        seniorbonus = new javax.swing.JButton();
 
         jButton11.setText("jButton11");
 
@@ -71,7 +74,7 @@ public class SeniorAdminPanel extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(250, 480, 150, 23);
+        jButton1.setBounds(240, 410, 150, 23);
 
         jButton2.setBackground(new java.awt.Color(153, 153, 255));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -95,23 +98,23 @@ public class SeniorAdminPanel extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(10, 110, 180, 40);
+        jButton3.setBounds(10, 100, 180, 40);
 
-        jButton4.setBackground(new java.awt.Color(0, 204, 51));
-        jButton4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(0, 51, 204));
-        jButton4.setText("Watch Senior Bonus");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        extra.setBackground(new java.awt.Color(0, 204, 51));
+        extra.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        extra.setForeground(new java.awt.Color(0, 51, 204));
+        extra.setText("Watch Senior extra");
+        extra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                extraActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4);
-        jButton4.setBounds(10, 290, 180, 40);
+        getContentPane().add(extra);
+        extra.setBounds(10, 220, 180, 40);
 
         out.setOpaque(true);
         getContentPane().add(out);
-        out.setBounds(220, 50, 390, 410);
+        out.setBounds(290, 60, 320, 320);
 
         jButton6.setText("Give Bonus");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -120,9 +123,9 @@ public class SeniorAdminPanel extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton6);
-        jButton6.setBounds(80, 170, 109, 40);
+        jButton6.setBounds(80, 140, 109, 40);
         getContentPane().add(setsalary);
-        setsalary.setBounds(10, 170, 60, 40);
+        setsalary.setBounds(10, 140, 60, 40);
 
         jButton7.setBackground(new java.awt.Color(0, 204, 51));
         jButton7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -134,7 +137,7 @@ public class SeniorAdminPanel extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton7);
-        jButton7.setBounds(10, 230, 180, 40);
+        jButton7.setBounds(10, 180, 180, 40);
 
         jButton8.setBackground(new java.awt.Color(51, 255, 51));
         jButton8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -146,7 +149,7 @@ public class SeniorAdminPanel extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton8);
-        jButton8.setBounds(10, 400, 180, 40);
+        jButton8.setBounds(10, 340, 180, 40);
 
         jButton9.setBackground(new java.awt.Color(51, 0, 51));
         jButton9.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -157,7 +160,7 @@ public class SeniorAdminPanel extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton9);
-        jButton9.setBounds(10, 460, 180, 40);
+        jButton9.setBounds(10, 380, 180, 40);
 
         jButton10.setBackground(new java.awt.Color(51, 255, 51));
         jButton10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -169,7 +172,7 @@ public class SeniorAdminPanel extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton10);
-        jButton10.setBounds(10, 350, 180, 40);
+        jButton10.setBounds(10, 300, 180, 40);
 
         jButton5.setText("Exit");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -178,7 +181,19 @@ public class SeniorAdminPanel extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(460, 480, 51, 23);
+        jButton5.setBounds(460, 410, 51, 23);
+
+        seniorbonus.setBackground(new java.awt.Color(0, 204, 51));
+        seniorbonus.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        seniorbonus.setForeground(new java.awt.Color(0, 51, 204));
+        seniorbonus.setText("Watch Senior Bonus");
+        seniorbonus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                seniorbonusActionPerformed(evt);
+            }
+        });
+        getContentPane().add(seniorbonus);
+        seniorbonus.setBounds(10, 260, 180, 40);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -215,45 +230,50 @@ public class SeniorAdminPanel extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-
-        String bonus = String.valueOf(sr.calculateBonus(sr.getSalary()));
+    private void extraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_extraActionPerformed
+        double calculatesalary = sr.getSalary();
+        double calculatebous = sr.bonus;
+        double calculated = sr.calculateBonus(calculatesalary, calculatebous);
+        String bonus = Double.toString(calculated);
         out.setText(bonus);
-        jButton4.setBackground(Color.CYAN);
-
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+        extra.setBackground(Color.CYAN);
+        out.setBackground(Color.YELLOW);
+    }//GEN-LAST:event_extraActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         sr.getSalary();
         String c = String.valueOf(sr.getSalary());
         out.setText(c);
-       jButton7.setBackground(Color.CYAN);
-        // TODO add your handling code here:
+        jButton7.setBackground(Color.CYAN);
+out.setBackground(Color.green);
+out.setBackground(Color.black);
+out.setForeground(Color.WHITE);
+// TODO add your handling code here:
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
- 
+
         out.setText("10000");
-          jButton8.setBackground(Color.CYAN);
+        jButton8.setBackground(Color.CYAN);
+out.setBackground(Color.blue);
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void salarybtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salarybtnActionPerformed
 
-        
-        int b=Integer.parseInt(setsalary.getText());
+        int b = Integer.parseInt(setsalary.getText());
         sr.basicsalary(b);
-        
+
         // TODO add your handling code here:
     }//GEN-LAST:event_salarybtnActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-       String c= String.valueOf( m.getSalary()) ;
+        String c = String.valueOf(m.getSalary());
         out.setText(c);
         jButton9.setBackground(Color.CYAN);
-
-        // TODO add your handling code here:
+out.setBackground(Color.BLACK);
+out.setForeground(Color.WHITE);
+// TODO add your handling code here:
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
@@ -265,16 +285,30 @@ public class SeniorAdminPanel extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-   setsalary.getText();
-   double b=Integer.parseInt(setsalary.getText());
+       
+        try{setsalary.getText();
+        }
+        catch(Exception e){
+        JOptionPane.showMessageDialog(null,"Invalid value");
+        }
+        double b = Integer.parseInt(setsalary.getText());
         sr.calculateBonus(b);
-
+        out.setBackground(Color.MAGENTA);
+out.setText(Double.toString(b)+ "% Bonus added!");
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-System.exit(0);        // TODO add your handling code here:
+        System.exit(0);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void seniorbonusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seniorbonusActionPerformed
+        double calculatedbonus = sr.calculateBonus(sr.getSalary());
+        String bonus = Double.toString(calculatedbonus);
+        out.setText(bonus);
+        seniorbonus.setBackground(Color.CYAN);
+        out.setBackground(Color.red);
+    }//GEN-LAST:event_seniorbonusActionPerformed
 
     /**
      * @param args the command line arguments
@@ -313,12 +347,12 @@ System.exit(0);        // TODO add your handling code here:
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton extra;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
@@ -326,6 +360,7 @@ System.exit(0);        // TODO add your handling code here:
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel out;
+    private javax.swing.JButton seniorbonus;
     private javax.swing.JTextField setsalary;
     // End of variables declaration//GEN-END:variables
 }

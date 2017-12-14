@@ -9,7 +9,6 @@ private double salary;
 
       this.salary=salary;
   };
-
   
    
     public double getSalary() {
@@ -19,6 +18,7 @@ private double salary;
     }
 
 abstract int employee_id(int id);
-    
-    }
+
+
+}
 
